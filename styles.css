@@ -1,14 +1,39 @@
 body {
     font-family: 'Montserrat', sans-serif;
     text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3,
+h4,
+h5 {
     font-family: 'Montserrat', sans-serif;
 }
 
+h4 {
+    font-weight: 600;
+    font-size: large;
+}
+
+h5 {
+    font-weight: 500;
+    font-size: medium;
+}
+
 p {
-    color: #8f8f8f;
+    color: #fff
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.container-fluid {
+    padding: 3% 7%;
 }
 
 
@@ -17,33 +42,227 @@ p {
 .biggest-heading {
     font-weight: 900;
     line-height: 1.5;
+    margin-bottom: 1rem;
+    font-size: 44px;
 }
 
 .big-heading {
-    font-weight: bolder;
+    font-weight: 600;
     line-height: 1.5;
 }
 
-/* Title and Navbar */
+/*Navbar */
+
+nav {
+    height: 64px;
+    padding: 2% 10%;
+}
+
+.navbar {
+    color: #b6d3e6;
+    width: 100vw;
+    position: fixed;
+    /* opacity: 0.1; */
+    z-index: 1;
+}
 
 
+
+.navbar-brand,
+.navbar-brand>img {
+    height: 60px;
+}
+
+.nav-link:hover {
+
+}
+
+.navbar-fixed-top.scrolled {
+    background-color: #fff !important;
+    transition: background-color 200ms linear;
+}
+
+.navbar-fixed-top.scrolled > div > div > a {
+    color: #345 !important;
+    transition: background-color 200ms linear;
+}
+
+
+
+/* Title */
+
+#title {
+    /* background-color: #1389d5; */
+
+}
+
+#title>.container-fluid {
+    padding: 0;
+}
+
+.title {
+    /* background-image: url("images/background.jpg");
+     */
+    background-color: #1985cd;
+}
+
+.backdrop {
+    width: 100%;
+    height: 40rem;
+    position: relative;
+    filter: sepia(100%) saturate(300%) brightness(60%) hue-rotate(140deg) blur(3px);
+    opacity: 0.6;
+}
+
+.title-head {
+    position: absolute;
+    color: #fff;
+    align-self: center;
+}
 
 
 /* Community Cards */
+
+
+.container {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.card-img-overlay>a {
+    margin: 0 10px;
+}
+
+.card-img {
+    aspect-ratio: 1;
+}
+
+.card-img-overlay {
+    transform: translateY(21rem);
+    transition: transform 0.18s ease-in;
+    background-color: rgba(0, 0, 0, 1);
+    padding: 5% 15% 10%;
+}
+
+.card-img-overlay>.card-text {
+    opacity: 0;
+    transform: translateY(-6rem);
+    transition: opacity 0.05s ease-in, transform 0.25s ease-in;
+}
+
+.card-img-overlay>.btn {
+    opacity: 0;
+    transform: translateY(2rem);
+}
+
+.card {
+    overflow: hidden;
+    background-color: #345;
+    /* aspect-ratio: 1; */
+    margin: 15%;
+
+}
+
+.card:hover>.card-img {
+    mix-blend-mode: overlay;
+}
+
+.card:hover>.card-img-overlay {
+    transform: translateY(0);
+    transition: transform 0.25s ease-out;
+    background-color: rgba(0, 0, 0, .1);
+    padding-top: 10%;
+}
+
+.card:hover>.card-img-overlay>.card-text {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 0.5s ease-out, transform 0.2s ease-out;
+}
+
+.card:hover>.card-img-overlay>.btn {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 0.7s ease-out, transform 0.35s ease-out;
+}
+
 
 
 
 
 /* Footer */
 
+#footer {
+    background-color: #1389d5;
+    color: #fff;
+    font-size: 14px;
+}
 
+#footer>div {
+    padding: 2rem 0;
+}
 
+.footer-1 {
+    text-align: center;
+    margin: auto;
+    width: 90%;
+    padding: 2rem 0;
+}
 
+.footer-1>p {
+    width: 30%;
+    /*media*/
+    margin: auto;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    gap: 20px;
+    margin-bottom: 2rem;
+    /*media*/
+}
+
+.footer-column>h5 {
+    margin-bottom: 0;
+}
+
+.footer-column>a {
+    line-height: 0.2;
+    color: #b6d3e6;
+    font-weight: 300;
+}
+
+.footer-column>a:hover {
+    color: #fff;
+    font-weight: 400;
+}
+
+.phone {
+    margin-bottom: 0;
+}
+
+.mail {
+    margin-top: auto;
+    margin-bottom: 0;
+}
+
+.footer-links>a {
+    margin: 0 2% 2rem;
+    color: #a9cde5;
+}
+
+.footer-links>a:hover {
+    color: #fff
+}
 
 /* Small screens */
 /* @media (max-width: 786px) { */
 
-    /* html {
+/* html {
         width: 100vw;
     }
 
@@ -68,12 +287,12 @@ p {
     .testimonial-image {
         width: 20%;
     } */
-}
+/* } */
 
 /* Large screens */
 /* @media (min-width: 786px) { */
-    
-    /* h1 {
+
+/* h1 {
         font-size: 3rem;
     }
 
@@ -84,4 +303,4 @@ p {
     .testimonial-image {
         width: 10%;
     } */
-}
+/* } */
