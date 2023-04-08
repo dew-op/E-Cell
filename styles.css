@@ -37,6 +37,8 @@ a {
 }
 
 
+
+
 /* Headings */
 
 .biggest-heading {
@@ -50,6 +52,9 @@ a {
     font-weight: 600;
     line-height: 1.5;
 }
+
+
+
 
 /*Navbar */
 
@@ -70,7 +75,22 @@ nav {
 
 .navbar-brand,
 .navbar-brand>img {
-    height: 60px;
+    height: 50px;
+    padding: auto;
+    margin-left: 10px;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: space-between;
+    /* text-align: right;  */
+    align-items: center;
+    margin: 0 3%;
+    gap: 10px;
+}
+
+.nav-link {
+    padding: auto;
 }
 
 .nav-link:hover {
@@ -82,9 +102,18 @@ nav {
     transition: background-color 200ms linear;
 }
 
+.navbar-fixed-top.scrolled > div > a > img {
+    content: url('/images/Brand.png');
+}
+
 .navbar-fixed-top.scrolled > div > div > a {
     color: #345 !important;
     transition: background-color 200ms linear;
+}
+
+.navbar-fixed-top.scrolled > div > div > .active {
+    color : #1389d5 !important;
+    font-weight: 600;
 }
 
 
@@ -103,15 +132,17 @@ nav {
 .title {
     /* background-image: url("images/background.jpg");
      */
-    background-color: #1985cd;
+    background-color: #fff;
 }
 
 .backdrop {
     width: 100%;
     height: 40rem;
     position: relative;
-    filter: sepia(100%) saturate(300%) brightness(60%) hue-rotate(140deg) blur(3px);
-    opacity: 0.6;
+    filter: sepia(100%) saturate(600%) brightness(60%) hue-rotate(160deg) blur(3px);
+    opacity: 6.6666;
+    border-bottom-left-radius: 20%;
+    border-bottom-right-radius: 20%;
 }
 
 .title-head {
@@ -119,6 +150,17 @@ nav {
     color: #fff;
     align-self: center;
 }
+
+.title-big-header {
+    font-family: 'Righteous', cursive;
+    font-size: 144px;
+}
+
+.title-small-header {
+    font-family: 'Gemunu Libre', sans-serif;
+    letter-spacing: 1.8rem;
+}
+
 
 
 /* Community Cards */
@@ -139,10 +181,11 @@ nav {
 }
 
 .card-img-overlay {
-    transform: translateY(21rem);
+    transform: translateY(78%);
     transition: transform 0.18s ease-in;
     background-color: rgba(0, 0, 0, 1);
-    padding: 5% 15% 10%;
+    padding: 5% 6% 10%;
+    overflow: auto;
 }
 
 .card-img-overlay>.card-text {
@@ -159,9 +202,22 @@ nav {
 .card {
     overflow: hidden;
     background-color: #345;
-    /* aspect-ratio: 1; */
+    aspect-ratio: 1;
     margin: 15%;
 
+}
+
+.card-title {
+    font-family: 'Gemunu Libre', sans-serif;
+    font-weight: 800;
+}
+
+.card-img-overlay > p {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
+}
+
+.testfont {
 }
 
 .card:hover>.card-img {
@@ -197,6 +253,7 @@ nav {
     background-color: #1389d5;
     color: #fff;
     font-size: 14px;
+    padding: 0 7% !important;
 }
 
 #footer>div {
