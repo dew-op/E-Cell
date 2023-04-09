@@ -103,7 +103,7 @@ nav {
 }
 
 .navbar-fixed-top.scrolled > div > a > img {
-    content: url('/images/Brand.png');
+    content: url('images/Brand.png');
 }
 
 .navbar-fixed-top.scrolled > div > div > a {
